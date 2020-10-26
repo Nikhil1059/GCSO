@@ -3,23 +3,27 @@ var speed,weight;
 
 
 function setup() {
-  createCanvas(1600, 400);
+  createCanvas(1200, 400);
 car=createSprite(50,200,50,50);
-wall=createSprite(1300,200,20,height/2);
+wall=createSprite(900,200,20,height/2);
 wall.shapeColor = (80,80,80);
 speed=random(60,90);
 weight=random(400,1500);
 
-  car.velocityX=speed;
+ 
 }
 
 function draw() {
   background("black"); 
- 
- 
+  textSize(50);
+  stroke("white");
+  text("Press space to shoot", 300, 80);  
 
   
-  
+  if (keyDown("space")){
+    car.velocityX=speed;
+
+  }
  
     
 
